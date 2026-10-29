@@ -9,7 +9,17 @@ import streamlit as st
 
 st.set_page_config(page_title="BIOMEDICS | Gestión de clientes", page_icon="🦻", layout="wide")
 
-st.sidebar.markdown('<div style="color:#C8102E;font-size:25px;font-weight:800;text-align:center;">BIOMEDICS</div>', unsafe_allow_html=True)
+st.sidebar.markdown("""
+<div style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 4px 22px;">
+  <svg viewBox="0 0 180 118" role="img" aria-label="Logotipo provisional BIOMEDICS" style="width:150px;max-width:100%;height:auto;">
+    <path d="M28 91V27L58 74L88 27V91" fill="none" stroke="#C8102E" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter"/>
+    <path d="M112 27H145C160 27 168 39 168 59S160 91 145 91H112Z" fill="none" stroke="#252525" stroke-width="10"/>
+    <path d="M111 59H149" fill="none" stroke="#C8102E" stroke-width="7" stroke-linecap="round"/>
+  </svg>
+  <div style="color:#C8102E;font-family:Arial,sans-serif;font-size:25px;font-weight:800;letter-spacing:1px;text-align:center;margin-top:5px;">BIOMEDICS</div>
+  <div style="color:#555;font-family:Arial,sans-serif;font-size:11px;letter-spacing:3px;text-align:center;margin-top:2px;">EXPERTOS EN AUDICIÓN</div>
+</div>
+""", unsafe_allow_html=True)
 
 def obtener_url():
     url = os.getenv("DATABASE_URL")
