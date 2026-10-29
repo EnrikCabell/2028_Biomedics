@@ -1,6 +1,4 @@
 import os
-import base64
-from io import BytesIO
 import sqlite3
 from contextlib import closing
 from datetime import date, datetime, time
@@ -11,18 +9,9 @@ import streamlit as st
 
 st.set_page_config(page_title="BIOMEDICS | Gestión de clientes", page_icon="🦻", layout="wide")
 
+st.sidebar.image("bio_logo.png", width=150)
 st.sidebar.markdown(
-    """
-    <div style="width:100%;display:flex;flex-direction:column;align-items:center;padding:12px 8px 20px;box-sizing:border-box;">
-      <svg viewBox="0 0 120 120" width="150" height="150" role="img" aria-label="BIOMEDICS">
-        <path d="M18 112 L18 8 L34 8 L34 112 Z" fill="#D71920"/>
-        <path d="M34 65 L91 8 L108 8 L108 22 L48 82 L34 82 Z" fill="#D71920"/>
-        <path d="M35 78 L49 64 L108 112 L87 112 Z" fill="#D71920"/>
-        <path d="M55 10 L68 10 L33 47 L20 47 Z" fill="#D71920"/>
-      </svg>
-      <div style="font-size:25px;font-weight:800;letter-spacing:.4px;color:#C8102E;text-align:center;line-height:1.2;">BIOMEDICS</div>
-    </div>
-    """,
+    '<div style="color:#C8102E;font-size:25px;font-weight:800;text-align:center;">BIOMEDICS</div>',
     unsafe_allow_html=True,
 )
 
