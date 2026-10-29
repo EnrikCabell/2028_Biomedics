@@ -9,8 +9,6 @@ import streamlit as st
 
 st.set_page_config(page_title="BIOMEDICS | Gestión de clientes", page_icon="🦻", layout="wide")
 
-st.sidebar.image("bio_logo.png", width=150)
-st.sidebar.image("bio_logo.png", width=150)
 st.sidebar.markdown('<div style="color:#C8102E;font-size:25px;font-weight:800;text-align:center;">BIOMEDICS</div>', unsafe_allow_html=True)
 
 def obtener_url():
