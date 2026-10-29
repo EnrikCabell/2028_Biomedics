@@ -1,12 +1,24 @@
 # BIOMEDICS
 
-Aplicación para gestionar clientes, estudios y citas.
+Aplicación para gestionar clientes, estudios, citas y búsquedas de expedientes.
 
-## Ejecución
+## Modo de prueba
+
+Si no existe la variable `DATABASE_URL`, la aplicación inicia en modo de prueba y guarda registros en `biomedics_demo.db`. En Streamlit Cloud ese archivo no debe considerarse almacenamiento permanente.
+
+## Base permanente
+
+Cuando se configure PostgreSQL, agrega en Streamlit → Settings → Secrets:
+
+```toml
+DATABASE_URL = "postgresql://usuario:contraseña@servidor:5432/base?sslmode=require"
+```
+
+La aplicación detecta la conexión y utiliza PostgreSQL automáticamente.
+
+## Instalación local
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
-La aplicación usa SQLite y crea el archivo local `biomedics.db` al iniciar.
