@@ -49,7 +49,7 @@ inicializar()
 st.title("BIOMEDICS")
 st.caption("Gestión de clientes, estudios y citas")
 
-menu = st.sidebar.radio("Módulos", ["Panel", "Clientes", "Estudios", "Citas", "Buscar"])
+menu = st.sidebar.radio("Panel", ["Panel", "Clientes", "Estudios", "Citas", "Buscar"])
 
 clientes = consultar("SELECT id, nombre, telefono, correo FROM clientes ORDER BY nombre")
 
