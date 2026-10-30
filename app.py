@@ -31,19 +31,19 @@ st.markdown("""
 :root { --ink:#142B43; --navy:#102B46; --blue:#176B87; --cyan:#54D6D0; --paper:#F3F7FA; --muted:#64788A; }
 .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"] { background:var(--paper); }
 [data-testid="stHeader"] { background:rgba(243,247,250,.92); }
-[data-testid="stSidebar"] { background:linear-gradient(180deg,#102B46 0%,#173E5B 100%); border-right:1px solid #254B67; }
-[data-testid="stSidebar"] * { color:#F4FAFC; }
-[data-testid="stSidebar"] [data-testid="stRadio"] label { color:#EAF5F8 !important; }
+[data-testid="stSidebar"] { background:linear-gradient(180deg,#B9E3F2 0%,#91CDE5 100%); border-right:1px solid #78B8D5; }
+[data-testid="stSidebar"] * { color:#123D59; }
+[data-testid="stSidebar"] [data-testid="stRadio"] label { color:#123D59 !important; }
 [data-testid="stSidebar"] [role="radio"] { padding:9px 12px; border-radius:10px; }
-[data-testid="stSidebar"] [aria-checked="true"] { background:rgba(84,214,208,.16); border:1px solid rgba(84,214,208,.35); }
+[data-testid="stSidebar"] [aria-checked="true"] { background:rgba(255,255,255,.48); border:1px solid rgba(18,61,89,.22); }
 [data-testid="stSidebar"] input[type="radio"] { accent-color:#54D6D0 !important; }
 .brand-lockup { display:flex; flex-direction:column; align-items:center; padding:18px 8px 26px; text-align:center; }
-.brand-symbol { width:76px; height:76px; display:grid; place-items:center; border:1px solid rgba(84,214,208,.4); border-radius:24px; background:rgba(255,255,255,.06); }
-.brand-symbol svg { width:65px; height:65px; }
-.brand-name { margin-top:14px; color:#fff; font:800 25px Arial,sans-serif; letter-spacing:2.8px; }
-.brand-tag { margin-top:5px; color:#A8D9DC; font:600 9px Arial,sans-serif; letter-spacing:2.2px; }
+.brand-symbol { width:76px; height:76px; display:grid; place-items:center; border:1px solid rgba(18,61,89,.18); border-radius:24px; background:rgba(255,255,255,.35); }
+.brand-symbol svg { width:65px; height:65px; transform:scaleX(-1); }
+.brand-name { margin-top:14px; color:#123D59; font:800 25px Arial,sans-serif; letter-spacing:2.8px; }
+.brand-tag { margin-top:5px; color:#285F7B; font:600 9px Arial,sans-serif; letter-spacing:2.2px; }
 .brand-rule { width:48px; height:2px; background:#54D6D0; margin:19px 0 10px; }
-.brand-caption { color:#A8BDCC; font:600 9px Arial,sans-serif; letter-spacing:2px; }
+.brand-caption { color:#285F7B; font:600 9px Arial,sans-serif; letter-spacing:2px; }
 .block-container { padding-top:2.1rem; padding-bottom:3rem; max-width:1500px; }
 h1 { color:var(--ink) !important; font-size:2rem !important; font-weight:800 !important; letter-spacing:-.6px; }
 h2,h3 { color:var(--ink) !important; font-weight:750 !important; }
