@@ -1,6 +1,4 @@
 import os
-import hashlib
-import hmac
 import sqlite3
 from contextlib import closing
 from datetime import date, datetime, time
@@ -20,41 +18,6 @@ def obtener_config(clave, predeterminado=None):
     except Exception:
         return predeterminado
 
-
-# Acceso privado: la aplicación no muestra datos sin credenciales configuradas.
-USUARIO_ADMIN = obtener_config("APP_USERNAME")
-HASH_PASSWORD = obtener_config("APP_PASSWORD_HASH")
-SALT_PASSWORD = obtener_config("APP_PASSWORD_SALT")
-
-if not all((USUARIO_ADMIN, HASH_PASSWORD, SALT_PASSWORD)):
-    st.error("Acceso no configurado. Define APP_USERNAME, APP_PASSWORD_SALT y APP_PASSWORD_HASH en Secrets antes de usar la aplicación.")
-    st.info("Consulta DEPLOYMENT.md en el repositorio para generar las credenciales y configurar la base de datos.")
-    st.stop()
-
-def validar_password(password):
-    calculado = hashlib.pbkdf2_hmac(
-        "sha256", password.encode("utf-8"), SALT_PASSWORD.encode("utf-8"), 600000
-    ).hex()
-    return hmac.compare_digest(calculado, HASH_PASSWORD)
-
-if not st.session_state.get("autenticado", False):
-    st.title("BIOMEDICS | Acceso privado")
-    with st.form("inicio_sesion"):
-        usuario = st.text_input("Usuario")
-        password = st.text_input("Contraseña", type="password")
-        entrar = st.form_submit_button("Iniciar sesión", type="primary")
-    if entrar:
-        if hmac.compare_digest(usuario, USUARIO_ADMIN) and validar_password(password):
-            st.session_state["autenticado"] = True
-            st.rerun()
-        else:
-            st.error("Usuario o contraseña incorrectos.")
-    st.stop()
-
-
-if st.sidebar.button("Cerrar sesión"):
-    st.session_state["autenticado"] = False
-    st.rerun()
 
 st.sidebar.markdown("""
 <div class="brand-lockup">
