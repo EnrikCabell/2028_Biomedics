@@ -118,6 +118,9 @@ def obtener_url():
     return url
 
 DATABASE_URL = obtener_url()
+if obtener_config("APP_ENV", "development") == "production" and not DATABASE_URL:
+    st.error("La base de datos PostgreSQL no está configurada. La aplicación se ha detenido para evitar guardar datos en almacenamiento temporal.")
+    st.stop()
 MODO_DEMO = not bool(DATABASE_URL)
 DB_LOCAL = "biomedics_demo.db"
 
