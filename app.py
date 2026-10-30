@@ -48,7 +48,7 @@ st.markdown("""
 [data-testid="stSidebar"] [data-baseweb="radio"] > div:first-child > div { background-color:#91CDE5 !important; }
 [data-testid="stSidebar"] [data-baseweb="radio"] input:checked { accent-color:#91CDE5 !important; }
 .top-brand { display:flex; align-items:center; justify-content:flex-end; gap:9px; width:100%; margin:0 0 8px; color:#176B87; font:800 14px Arial,sans-serif; letter-spacing:2px; }
-.top-brand svg { width:46px; height:46px; flex:0 0 46px; }
+.top-brand svg { width:46px; height:46px; flex:0 0 46px; transform:scaleX(-1); }
 .legal-footer { margin-top:3.5rem; padding:22px 10px 10px; border-top:1px solid #DCE7EC; text-align:center; color:#64788A; font:italic 13px/1.65 Arial,sans-serif; }
 @media (max-width: 768px) {
   .top-brand { margin-top:0; margin-bottom:5px; }
