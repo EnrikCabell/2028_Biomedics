@@ -49,6 +49,10 @@ st.markdown("""
 [data-testid="stSidebar"] [data-baseweb="radio"] input:checked { accent-color:#91CDE5 !important; }
 .top-brand { display:flex; align-items:center; justify-content:flex-end; gap:9px; width:100%; margin:0 0 8px; color:#176B87; font:800 14px Arial,sans-serif; letter-spacing:2px; }
 .top-brand svg { width:46px; height:46px; flex:0 0 46px; transform:scaleX(-1); }
+.top-brand-copy { display:flex; flex-direction:column; align-items:flex-start; gap:3px; }
+.top-brand-tag { color:#176B87; font:800 13px Arial,sans-serif; letter-spacing:1.1px; }
+.top-brand-by { color:#64788A; font:600 9px Arial,sans-serif; letter-spacing:1.8px; }
+
 .legal-footer { margin-top:3.5rem; padding:22px 10px 10px; border-top:1px solid #DCE7EC; text-align:center; color:#64788A; font:italic 13px/1.65 Arial,sans-serif; }
 @media (max-width: 768px) {
   .top-brand { margin-top:0; margin-bottom:5px; }
@@ -181,7 +185,10 @@ st.markdown("""
     <path d="M63 38c7 4 11 10 11 18" fill="none" stroke="#176B87" stroke-width="6" stroke-linecap="round"/>
     <circle cx="74" cy="61" r="5" fill="#54D6D0"/>
   </svg>
-  <span>BIOMEDICS</span>
+  <div class="top-brand-copy">
+    <span class="top-brand-tag">EXPERTOS EN AUDICIÓN</span>
+    <span class="top-brand-by">BY BIOMEDICS</span>
+  </div>
 </div>
 """, unsafe_allow_html=True)
 
