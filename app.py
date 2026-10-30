@@ -47,6 +47,14 @@ st.markdown("""
 [data-testid="stSidebar"] [data-baseweb="radio"] > div:first-child { border:2px solid #91CDE5 !important; }
 [data-testid="stSidebar"] [data-baseweb="radio"] > div:first-child > div { background-color:#91CDE5 !important; }
 [data-testid="stSidebar"] [data-baseweb="radio"] input:checked { accent-color:#91CDE5 !important; }
+.top-brand { display:flex; align-items:center; justify-content:flex-end; gap:9px; width:100%; margin:0 0 8px; color:#176B87; font:800 14px Arial,sans-serif; letter-spacing:2px; }
+.top-brand svg { width:46px; height:46px; flex:0 0 46px; }
+.legal-footer { margin-top:3.5rem; padding:22px 10px 10px; border-top:1px solid #DCE7EC; text-align:center; color:#64788A; font:italic 13px/1.65 Arial,sans-serif; }
+@media (max-width: 768px) {
+  .top-brand { margin-top:0; margin-bottom:5px; }
+  .top-brand svg { width:42px; height:42px; flex-basis:42px; }
+  .legal-footer { font-size:11px; padding-left:4px; padding-right:4px; }
+}
 .brand-lockup { display:flex; flex-direction:column; align-items:center; padding:18px 8px 26px; text-align:center; }
 .brand-symbol { width:76px; height:76px; display:grid; place-items:center; border:1px solid rgba(145,205,229,.42); border-radius:24px; background:rgba(255,255,255,.06); }
 .brand-symbol svg { width:65px; height:65px; transform:scaleX(-1); }
@@ -164,6 +172,18 @@ except Exception as exc:
     st.error("No fue posible iniciar la base de datos. Revisa la conexión y la configuración.")
     st.exception(exc)
     st.stop()
+
+st.markdown("""
+<div class="top-brand" aria-label="BIOMEDICS">
+  <svg viewBox="0 0 96 96" role="img" aria-label="BIOMEDICS">
+    <path d="M56 12c-20 0-34 15-34 35 0 14 7 23 17 28 6 3 8 7 8 13" fill="none" stroke="#176B87" stroke-width="7" stroke-linecap="round"/>
+    <path d="M56 27c-11 0-19 8-19 20 0 8 4 13 10 17 5 3 8 7 8 13" fill="none" stroke="#54D6D0" stroke-width="6" stroke-linecap="round"/>
+    <path d="M63 38c7 4 11 10 11 18" fill="none" stroke="#176B87" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="74" cy="61" r="5" fill="#54D6D0"/>
+  </svg>
+  <span>BIOMEDICS</span>
+</div>
+""", unsafe_allow_html=True)
 
 st.title("EXPERTOS EN AUDICIÓN")
 st.caption("BIOMEDICS")
@@ -313,3 +333,15 @@ elif menu == "Buscar":
             st.dataframe(consultar(f"""SELECT cl.nombre AS Cliente,c.fecha AS Fecha,c.hora AS Hora,c.motivo AS Motivo,c.estado AS Estado,c.notas AS Notas
                 FROM citas c JOIN clientes cl ON cl.id=c.cliente_id WHERE c.cliente_id IN ({marcas}) ORDER BY c.fecha,c.hora""", ids),
                 use_container_width=True, hide_index=True)
+
+
+st.markdown("""
+<div class="legal-footer">
+  Initial code and all additional changes are property and registered by<br>
+  Juan Enrique Cabello Vargas, PhD &amp; MSc.<br>
+  Conceptualized and created by<br>
+  Juan Enrique Cabello Vargas, PhD &amp; MSc.<br>
+  All rights reserved.<br>
+  Pax et Bonum.
+</div>
+""", unsafe_allow_html=True)
