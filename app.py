@@ -11,9 +11,12 @@ st.set_page_config(page_title="BIOMEDICS | Gestión de clientes", page_icon="�
 
 st.sidebar.markdown("""
 <div style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 4px 22px;">
-  <svg viewBox="0 0 200 130" role="img" aria-label="Monograma provisional BK de BIOMEDICS" style="width:158px;max-width:100%;height:auto;">
-    <path d="M24 16V112 M25 18H66C91 18 91 55 65 55H25 M25 55H69C98 55 96 110 66 110H25" fill="none" stroke="#C8102E" stroke-width="13" stroke-linecap="square" stroke-linejoin="round"/>
-    <path d="M111 17V112 M111 65L169 17 M111 65L171 112" fill="none" stroke="#252525" stroke-width="13" stroke-linecap="square" stroke-linejoin="miter"/>
+  <svg viewBox="0 0 220 150" role="img" aria-label="Monograma BK BIOMEDICS" style="width:158px;max-width:100%;height:auto;">
+    <circle cx="108" cy="18" r="12" fill="#C8102E"/>
+    <path d="M34 38 V126 M35 40 H69 C99 40 99 78 69 78 H35 M35 78 H72 C108 78 108 125 72 125 H35"
+      fill="none" stroke="#C8102E" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M111 38 V126 M113 82 C130 70 147 52 171 39 M113 82 C137 94 153 112 176 126"
+      fill="none" stroke="#252525" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
   <div style="color:#C8102E;font-family:Arial,sans-serif;font-size:25px;font-weight:800;letter-spacing:1px;text-align:center;margin-top:5px;">BIOMEDICS</div>
   <div style="color:#555;font-family:Arial,sans-serif;font-size:11px;letter-spacing:3px;text-align:center;margin-top:2px;">EXPERTOS EN AUDICIÓN</div>
