@@ -28,7 +28,7 @@ st.sidebar.markdown("""
 
 st.markdown("""
 <style>
-:root { --ink:#142B43; --navy:#102B46; --blue:#176B87; --cyan:#54D6D0; --paper:#F3F7FA; --muted:#64788A; }
+:root { --ink:#142B43; --navy:#102B46; --blue:#176B87; --cyan:#54D6D0; --paper:#F3F7FA; --muted:#64788A; --primary-color:#91CDE5 !important; --st-primary-color:#91CDE5 !important; }
 .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"] { background:var(--paper); }
 [data-testid="stHeader"] { background:rgba(243,247,250,.92); }
 [data-testid="stSidebar"] { background:linear-gradient(180deg,#173A8A 0%,#102B68 100%); border-right:1px solid #0E285E; }
@@ -36,12 +36,9 @@ st.markdown("""
 [data-testid="stSidebar"] [data-testid="stRadio"] label { color:#EAF5F8 !important; }
 [data-testid="stSidebar"] [role="radio"] { padding:9px 12px; border-radius:10px; }
 [data-testid="stSidebar"] [aria-checked="true"] { background:rgba(145,205,229,.22); border:1px solid rgba(145,205,229,.48); }
-[data-testid="stSidebar"] { --primary-color:#91CDE5 !important; --st-primary-color:#91CDE5 !important; }
-[data-testid="stSidebar"] input[type="radio"] { accent-color:#91CDE5 !important; }
-[data-testid="stSidebar"] [data-baseweb="radio"] > div:first-child { border-color:#91CDE5 !important; }
-[data-testid="stSidebar"] [data-baseweb="radio"] input:checked + div,
-[data-testid="stSidebar"] [role="radio"][aria-checked="true"] > div:first-child { background:#91CDE5 !important; border-color:#91CDE5 !important; }
-[data-testid="stSidebar"] [data-baseweb="radio"] input:checked ~ div { color:#F4FAFC !important; }
+[data-testid="stSidebar"] [data-baseweb="radio"] > div:first-child { border:2px solid #91CDE5 !important; }
+[data-testid="stSidebar"] [data-baseweb="radio"] > div:first-child > div { background-color:#91CDE5 !important; }
+[data-testid="stSidebar"] [data-baseweb="radio"] input:checked { accent-color:#91CDE5 !important; }
 .brand-lockup { display:flex; flex-direction:column; align-items:center; padding:18px 8px 26px; text-align:center; }
 .brand-symbol { width:76px; height:76px; display:grid; place-items:center; border:1px solid rgba(145,205,229,.42); border-radius:24px; background:rgba(255,255,255,.06); }
 .brand-symbol svg { width:65px; height:65px; transform:scaleX(-1); }
