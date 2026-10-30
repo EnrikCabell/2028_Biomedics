@@ -7,7 +7,7 @@ import pandas as pd
 import psycopg
 import streamlit as st
 
-st.set_page_config(page_title="BIOMEDICS | Gestión de clientes", page_icon="🦻", layout="wide")
+st.set_page_config(page_title="EXPERTOS EN AUDICIÓN", page_icon="🦻", layout="wide")
 
 st.sidebar.markdown("""
 <div class="brand-lockup">
@@ -19,10 +19,8 @@ st.sidebar.markdown("""
       <circle cx="74" cy="61" r="5" fill="#54D6D0"/>
     </svg>
   </div>
-  <div class="brand-name">BIOMEDICS</div>
   <div class="brand-tag">EXPERTOS EN AUDICIÓN</div>
-  <div class="brand-rule"></div>
-  <div class="brand-caption">GESTIÓN AUDITIVA INTEGRAL</div>
+  <div class="brand-by">BY BIOMEDICS</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -43,9 +41,8 @@ st.markdown("""
 .brand-symbol { width:76px; height:76px; display:grid; place-items:center; border:1px solid rgba(145,205,229,.42); border-radius:24px; background:rgba(255,255,255,.06); }
 .brand-symbol svg { width:65px; height:65px; transform:scaleX(-1); }
 .brand-name { margin-top:14px; color:#fff; font:800 25px Arial,sans-serif; letter-spacing:2.8px; }
-.brand-tag { margin-top:5px; color:#A8D9DC; font:600 9px Arial,sans-serif; letter-spacing:2.2px; }
-.brand-rule { width:48px; height:2px; background:#54D6D0; margin:19px 0 10px; }
-.brand-caption { color:#B9DCEC; font:600 9px Arial,sans-serif; letter-spacing:2px; }
+.brand-tag { margin-top:14px; color:#FFFFFF; font:800 15px Arial,sans-serif; letter-spacing:1.4px; }
+.brand-by { margin-top:7px; color:#A8D9DC; font:600 11px Arial,sans-serif; letter-spacing:2px; }
 .block-container { padding-top:2.1rem; padding-bottom:3rem; max-width:1500px; }
 h1 { color:var(--ink) !important; font-size:2rem !important; font-weight:800 !important; letter-spacing:-.6px; }
 h2,h3 { color:var(--ink) !important; font-weight:750 !important; }
@@ -155,8 +152,8 @@ except Exception as exc:
     st.exception(exc)
     st.stop()
 
-st.title("BIOMEDICS")
-st.caption("Gestión de clientes, estudios y citas")
+st.title("EXPERTOS EN AUDICIÓN")
+st.caption("BIOMEDICS")
 if MODO_DEMO:
     st.warning("SISTEMA DE PRUEBA: los registros se guardan temporalmente en el archivo local de la aplicación. Configura PostgreSQL para conservarlos de forma permanente.")
 
